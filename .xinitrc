@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xset r rate 200 25
+xset r rate 200 35
 xset m 0 0
 xset s off
 xsetroot -cursor_name left_ptr

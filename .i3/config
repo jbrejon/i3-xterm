@@ -19,13 +19,17 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec ~/.i3/i3shell.sh
 
 # kill focused window
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+
+# lock screen
+# bindsym $mod+Ctrl+l exec i3lock
 
 # change focus
 bindsym $mod+j focus left
@@ -52,10 +56,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+v split h
+bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+h split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -158,7 +162,7 @@ bar {
                 inactive_workspace #333333 #222222 #888888
                 urgent_workspace   #2f343a #900000 #ffffff
         }
-        status_command i3status -c ~/.i3status.conf
+        status_command ~/.i3/myi3status.sh
         position top
 }
 
