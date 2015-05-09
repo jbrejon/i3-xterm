@@ -20,7 +20,9 @@ if [ -e "/proc/$ZSH/cwd" ]
 then
         REAL_PATH=$(ls -l /proc/$ZSH/cwd | rev |cut -f 1 -d " " | rev)
         echo $REAL_PATH >> ~/.i3/logi3shell
-        xterm -e "cd $REAL_PATH; zsh" &
+#        xterm -e "cd $REAL_PATH; zsh" &
+        urxvt -cd "$REAL_PATH" &
 else
-        xterm
+#        xterm
+        urxvt
 fi
